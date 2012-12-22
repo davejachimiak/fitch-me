@@ -12,5 +12,6 @@ end
 
 group :test, :development do
   gem 'shoulda-matchers'
+  gem 'rspec-rails-mocha'
   gem 'rspec-rails', '~> 2.11.0'
 end
