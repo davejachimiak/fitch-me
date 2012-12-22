@@ -1,6 +1,9 @@
 <html>
   <body>
     <h3>A request for fitch slap, sir:</h3>
-    <a href="<%= url_for(host: 'fitchslap.heroku.com', controller: :pictures, action: :create, url: @url, token: @token) %>">accept</a>
+    <div><a href="<%= url_for @url %>" /></div>
+    <div>
+      <a href="<%= url_for(host: 'fitchslap.heroku.com', controller: :pictures, action: :create, url: @url, token: @token) %>">accept</a>
+    </div>
   </body>
 </html>
