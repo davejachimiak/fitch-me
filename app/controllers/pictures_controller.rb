@@ -9,7 +9,7 @@ class PicturesController < ApplicationController
   private
 
   def authorize_request
-    if params[:token] != DatAuth.dat_token
+    unless params[:token] == DatAuth.dat_token
       head :unauthorized
       return false
     end
