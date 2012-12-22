@@ -14,6 +14,7 @@ describe PicturesController do
 
       expect(response).to be_success
       expect(picture.url).to eq url
+      expect(response.body).to eq picture.to_json
     end
 
     it 'is secure' do
