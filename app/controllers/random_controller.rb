@@ -1,0 +1,2 @@
+class RandomController < ApplicationController
+end
