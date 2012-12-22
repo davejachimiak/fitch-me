@@ -1,4 +1,6 @@
 class Picture < ActiveRecord::Base
-  validates :url, presence: true
   attr_accessible :url
+
+  validates :url, presence: true
+  validates :url, uniqueness: true
 end
