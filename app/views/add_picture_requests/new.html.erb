@@ -1,0 +1,6 @@
+<h3>request an image to be added to the generator</h3>
+<%= form_tag('/add_picture_requests', action: :create) do %>
+  <%= label_tag :url, 'url' %>
+  <%= text_field_tag :url %>
+  <%= submit_tag 'request' %>
+<% end %>

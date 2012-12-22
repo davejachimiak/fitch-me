@@ -13,8 +13,12 @@ feature 'add image request', %{
     page.should have_content 'request an image to be added to the generator'
 
     fill_in 'url', with: 'http://www.images.com/bfitch420'
-    press_button 'request'
+    click_button 'request'
 
+    ['accept', 'reject', 'http://www.images.com/bfitch420'].each do |text|
+      ActionMailer::Base.deliveries.last.body.should include text
+    end
+    ActionMailer::Base.deliveries.last.to.should eq 'dave.jachimiak@gmail.com'
     page.should have_content 'Request sent.'
 
     click_link 'make another request'
