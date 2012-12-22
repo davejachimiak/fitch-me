@@ -3,4 +3,8 @@ class Picture < ActiveRecord::Base
 
   validates :url, presence: true
   validates :url, uniqueness: true
+
+  def self.random
+    order('random()').first
+  end
 end
