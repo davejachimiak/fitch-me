@@ -8,6 +8,7 @@ gem 'capistrano', :group => :development
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :test, :development do
