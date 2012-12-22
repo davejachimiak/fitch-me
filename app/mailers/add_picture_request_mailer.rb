@@ -1,5 +1,7 @@
 class AddPictureRequestMailer < ActionMailer::Base
-  default from: "from@example.com", to: 'dave.jachimiak@gmail.com'
+  EMAIL = 'dave.jachimiak@gmail.com'
+
+  default to: EMAIL, from: EMAIL, subject: 'request for fitch slap'
 
   def add_picture_request url
     @url = url

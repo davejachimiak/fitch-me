@@ -20,11 +20,9 @@ feature 'add image request', %{
     fill_in 'url', with: 'http://www.images.com/bfitch420'
     click_button 'request'
 
-    [accept_link].each do |text|
-      ActionMailer::Base.deliveries.last.body.encoded.should include text
-    end
+    ActionMailer::Base.deliveries.last.body.encoded.should include accept_link
     [:from, :to].each do |attr|
-      ActionMailer::Base.deliveries.last.send(attr).should eq 'dave.jachimiak@gmail.com'
+      ActionMailer::Base.deliveries.last.send(attr).should eq ['dave.jachimiak@gmail.com']
     end
     page.should have_content 'Request sent.'
 
