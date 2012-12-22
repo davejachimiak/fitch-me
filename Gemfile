@@ -4,7 +4,6 @@ gem 'pg'
 gem 'thin'
 gem 'rails-api'
 gem 'rails', '3.2.8'
-gem 'capistrano', :group => :development
 
 group :test do
   gem 'factory_girl_rails'
