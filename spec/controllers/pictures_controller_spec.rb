@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe PicturesController do
-  let(:url) { 'www.fancy.org' }
+  let(:url)     { 'www.fancy.org' }
+  let(:picture) { Picture.find_by_url url }
 
   before do
     DatAuth.stubs(:dat_token).returns 'dat secret token'
@@ -12,7 +13,14 @@ describe PicturesController do
       post :create, url: url, token: 'dat secret token'
 
       expect(response).to be_success
-      expect(Picture.last.url).to eq url
+      expect(picture.url).to eq url
+    end
+
+    it 'is secure' do
+      post :create, url: url, token: 'THA CLUB'
+
+      expect(response.response_code).to eq 401
+      expect(picture).to be_nil
     end
   end
 end
