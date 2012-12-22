@@ -10,10 +10,12 @@ describe RandomController do
 
     it 'fetches a random picture url' do
       get :show
-      expect(resonse).to be_success
+      expect(response).to be_success
 
-      urls = Picture.all.select :url
-      expect(urls).to include response.body
+      urls = Picture.all.map &:url
+      random_url = ActiveSupport::JSON.decode(response.body)['picture']['url']
+
+      expect(urls).to include random_url
     end
   end
 end
