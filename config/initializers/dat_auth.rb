@@ -1,0 +1,1 @@
+DatAuth = OpenStruct.new
