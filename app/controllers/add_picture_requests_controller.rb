@@ -3,5 +3,6 @@ class AddPictureRequestsController < ApplicationController
   end
 
   def create
+    AddPictureRequestMailer.add_picture_request(params[:url]).deliver
   end
 end
