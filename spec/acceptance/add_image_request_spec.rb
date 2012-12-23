@@ -5,8 +5,8 @@ feature 'add picture request', %{
   I want to ensure that no nsfw images end up in the db
   So that all can enjoy images of Brian Fitch
 } do
-  let(:accept_link) { '<a href="http://fitchslap.heroku.com/pictures?token=dat+phat+token&amp;url=http%3A%2F%2Fwww.images.com%2Fbfitch420">accept</a>' }
-  let(:picture_url) { '<a href="http://www.images.com/bfitch420" />' }
+  let(:accept_link) { '<a href="http://fitchslap.heroku.com/add_picture?token=dat+phat+token&amp;url=http%3A%2F%2Fwww.images.com%2Fbfitch420">accept</a>' }
+  let(:picture_url) { '<a href="http://www.images.com/bfitch420">picture</a>' }
 
   background do
     DatAuth.stubs(:dat_token).returns 'dat phat token'

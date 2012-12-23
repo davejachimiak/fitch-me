@@ -4,5 +4,6 @@ FitchSlap::Application.routes.draw do
   resources :pictures, only: :create
   resources :add_picture_requests, only: [:new, :create]
 
-  match '/random' => 'random#show'
+  match '/random'      => 'random#show'
+  match '/add_picture' => 'pictures#create'
 end
