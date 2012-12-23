@@ -1,8 +1,8 @@
-# Fitch Slap
+# Fitch Me
 Rails app/api for sweet pics of @bfitch.
 
 ## Endpoints
-host: fitchslap.herokuapp.com
+host: fitchme.herokuapp.com
 
 ### /random
 a random picture as json

@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FitchSlap::Application.load_tasks
+FitchMe::Application.load_tasks

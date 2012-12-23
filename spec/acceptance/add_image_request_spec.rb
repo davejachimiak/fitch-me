@@ -5,7 +5,7 @@ feature 'add picture request', %{
   I want to ensure that no nsfw images end up in the db
   So that all can enjoy images of Brian Fitch
 } do
-  let(:accept_link) { '<a href="http://fitchslap.heroku.com/add_picture?token=dat+phat+token&amp;url=http%3A%2F%2Fwww.images.com%2Fbfitch420">accept</a>' }
+  let(:accept_link) { '<a href="http://fitchme.heroku.com/add_picture?token=dat+phat+token&amp;url=http%3A%2F%2Fwww.images.com%2Fbfitch420">accept</a>' }
   let(:picture_url) { '<a href="http://www.images.com/bfitch420">picture</a>' }
 
   background do
@@ -15,7 +15,7 @@ feature 'add picture request', %{
   scenario 'send a valid request' do
     visit '/'
 
-    page.should have_content 'Fitch Slap'
+    page.should have_content 'Fitch Me'
     page.should have_content 'request an image to be added to the generator'
 
     fill_in 'url', with: 'http://www.images.com/bfitch420'

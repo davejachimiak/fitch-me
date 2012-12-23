@@ -14,7 +14,7 @@ describe AddPictureRequestMailer do
     end
 
     it 'sends the request from dave' do
-      expect(mail.subject).to eq 'request for fitch slap'
+      expect(mail.subject).to eq 'request for fitch me'
     end
   end
 end

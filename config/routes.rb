@@ -1,4 +1,4 @@
-FitchSlap::Application.routes.draw do
+FitchMe::Application.routes.draw do
   root to: 'add_picture_requests#new'
 
   resources :pictures, only: :create

@@ -1,20 +1,20 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: fitch_slap_development
+  database: fitch_me_development
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: fitch_slap_test
+  database: fitch_me_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: fitch_slap_production
+  database: fitch_me_production
   pool: 5
   timeout: 5000
