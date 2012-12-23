@@ -15,7 +15,7 @@ a page to add a url to the db, reviewed by @davejachimiak
 
 respond with json of random n pictures
 
-### Contribute
+## Contribute
 
 Add test coverage, open a pull request, blah blah. Test your controller
 if adding an endoint that serves json.
