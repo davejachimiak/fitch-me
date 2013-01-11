@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'pg'
 gem 'thin'
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 gem 'rails-api'
 
 group :test do
